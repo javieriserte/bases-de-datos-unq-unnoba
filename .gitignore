@@ -37,3 +37,9 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# VS code settings
+.vscode
+
+# Jupyter checkpoints
+.ipynb_checkpoints
