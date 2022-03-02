@@ -23,7 +23,7 @@ fontsize: 10pt
 
 ---
 
-## ¿Cómo está organizado el curso?
+# ¿Cómo está organizado el curso?
 
 Primer encuentro:
 
@@ -43,7 +43,7 @@ Tercer encuentro:
 
 ---
 
-## ¿Cómo vamos a trabajar en el curso?
+# ¿Cómo vamos a trabajar en el curso?
 
 - 50% teórico, 50% práctico (más o menos).
 - Vamos a trabajar con Jupyter notebooks en la plataforma Colab de Google.
@@ -52,7 +52,7 @@ Tercer encuentro:
 
 ---
 
-## ¿Qué es una base de datos?
+# ¿Qué es una base de datos?
 
 Es una colección organizada de información estructurada, almacenada en
 un sistema informático.
@@ -68,7 +68,7 @@ Una base de datos está controlada por un sistema de gestión de base de datos (
 
 ---
 
-## ¿Qué es una base de datos?
+# ¿Qué es una base de datos?
 
 Los datos en una base de datos suelen estar modelados como una serie de  tablas, con filas y columnas.
 
@@ -78,13 +78,13 @@ Una base de datos suele contener varias tablas entrelazadas entre ellas.
 
 ---
 
-## Ejemplo de Pfam
+# Ejemplo de Pfam
 
 ![height:600px](./images/pfam_domain.png)
 
 ---
 
-## Diferentes aspectos de una base de datos biológica
+# Diferentes aspectos de una base de datos biológica
 
 - Desde el punto de vista informático
   - Estructura de los datos.
@@ -100,9 +100,9 @@ Una base de datos suele contener varias tablas entrelazadas entre ellas.
 
 ---
 
-## Tipos de bases de datos biológicas
+# Tipos de bases de datos biológicas
 
-### Bases de datos primarias
+## Bases de datos primarias
 
 Archivan datos derivados directamente de resultados experimentales que son subidos por científicos. Por ejemplo:
 
@@ -116,9 +116,10 @@ Archivan datos derivados directamente de resultados experimentales que son subid
 Cada dato tiene asignado un número de acceso (**Accession number**), que identifica estos datos de forma única y nunca cambia.
 
 ---
-## Tipos de bases de datos biológicas
 
-### Bases de datos secundarias
+# Tipos de bases de datos biológicas
+
+## Bases de datos secundarias
 
 Los datos que almacenan provienen del análisis de los datos de las bases de datos primarias. Muchas veces los resultados son curados por expertos.
 
@@ -126,12 +127,13 @@ Las bases de datos secundarias suelen contener datos de **mejor** calidad que
 las bases de datos primarias.
 
 Por ejemplo:
+
 - Pfam (Protein families)
 - Uniprot Knowledgebase
 
 ---
 
-### Bases de datos especìficas/compuestas
+## Bases de datos específicas/compuestas
 
 - Contienen información sobre tópicos específicos
   - por ejemplo un organismo modelo
@@ -140,14 +142,15 @@ Por ejemplo:
 datos provienen de diferentes fuentes.
 
 Por ejemplo:
+
 - TAIR (The Arabidopsis Information Resource)
 - IntAct DB
 
 ---
 
-### Bases de datos de secuencias biológicas
+## Bases de datos de secuencias biológicas
 
-#### Genbank (NCBI)
+### Genbank (NCBI)
 
 - Es una colección anotada de secuencias de todas las secuencias de ADN que
   están publicamente disponibles.
@@ -161,23 +164,26 @@ https://www.ncbi.nlm.nih.gov/genbank/
 ---
 
 ![](images/genbank_stats.pdf)
+
 ---
-#### RefSeq (NCBI Reference Sequence Database)
+
+### RefSeq (NCBI Reference Sequence Database)
 
 Es una colección de secuencias de referencia para:
+
 - ADN genómico
 - Transcriptos
 - Proteinas
 
-Contiene secuencias no redundantes y bien anotadas.
-Sirve como una marco de referencia estables para otras bases de datos, proyectos,
-anotación de variantes, etc.
+Contiene secuencias no redundantes y bien anotadas. Sirve como una marco de
+referencia estables para otras bases de datos, proyectos, anotación de
+variantes, etc.
 
 https://www.ncbi.nlm.nih.gov/refseq/
 
 ---
 
-#### NCBI Nucleotide (nuccore)
+### NCBI Nucleotide (nuccore)
 
 Es una colección más inclusiva de secuencias de ADN y ARN.
 
@@ -187,7 +193,7 @@ https://www.ncbi.nlm.nih.gov/nuccore
 
 ---
 
-#### Sequence Read Archive
+### Sequence Read Archive
 
 Es una colección se secuencias generadas en experimentos de secuenciación
 masiva:
@@ -198,7 +204,8 @@ masiva:
 - Muestras ambientales
 
 ---
-#### Uniprot
+
+### Uniprot
 
 - Uniprot provee secuencias y anotaciones funcionales de proteinas.
 - Es el principal recurso sobre secuencias proteínas.
@@ -211,6 +218,12 @@ masiva:
     - TrEMBL: Contiene anotaciones generadas automáticamente (~230.000.000). No
       están revisadas a mano.
   - Proteomes: Colección de proteínas por organismo.
+
+---
+
+### Bases de datos de grupos de proteínas
+
+
 
 <!-- --- -->
 <!--

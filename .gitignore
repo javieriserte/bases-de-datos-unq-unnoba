@@ -43,3 +43,6 @@ vignettes/*.pdf
 
 # Jupyter checkpoints
 .ipynb_checkpoints
+
+# Pandoc tex2pdf
+tex2pdf*
