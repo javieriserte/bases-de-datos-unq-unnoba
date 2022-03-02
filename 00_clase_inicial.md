@@ -54,7 +54,8 @@ Tercer encuentro:
 
 ## ¿Qué es una base de datos?
 
-Es una colección organizada de información estructurada.
+Es una colección organizada de información estructurada, almacenada en
+un sistema informático.
 
 La forma en que está estructurada la información permite:
 
@@ -101,31 +102,118 @@ Una base de datos suele contener varias tablas entrelazadas entre ellas.
 
 ## Tipos de bases de datos biológicas
 
-1. Bases de datos primarias:
+### Bases de datos primarias
 
-Archivan datos experimentales que son subidos por científicos. Por ejemplo,
-secuencias de ácidos nucleócidos, proteínas
+Archivan datos derivados directamente de resultados experimentales que son subidos por científicos. Por ejemplo:
 
+- Secuencias de ácidos nucleócidos
+  - NCBI GenBank
+- Secuencias de proteínas.
+  - NCBI protein
+- Estructuras de proteínas.
+  - Protein Data Bank (PDB)
 
-<!-- 1. Primary databases :
+Cada dato tiene asignado un número de acceso (**Accession number**), que identifica estos datos de forma única y nunca cambia.
 
-It can also be called an archival database since it archives the experimental results submitted by the scientists. The primary database is populated with experimentally derived data like genome sequence, macromolecular structure, etc. The data entered here remains uncurated(no modifications are performed over the data).
-It obtains unique data obtained from the laboratory and these data are made accessible to normal users without any change.
-The data are given accession numbers when they are entered into the database. The same data can later be retrieved using the accession number. Accession number identifies each data uniquely and it never changes.
-Examples –
+---
+## Tipos de bases de datos biológicas
 
-Examples of Primary database- Nucleic Acid Databases are GenBank and DDBJ  
-Protein Databases are PDB,SwissProt,PIR,TrEMBL,Metacyc, etc.
-2. Secondary Database :
+### Bases de datos secundarias
 
-The data stored in these types of databases are the analyzed result of the primary database. Computational algorithms are applied to the primary database and meaningful and informative data is stored inside the secondary database. 
-The data here are highly curated(processing the data before it is presented in the database). A secondary database is better and contains more valuable knowledge compared to the primary database.
-Examples –
+Los datos que almacenan provienen del análisis de los datos de las bases de datos primarias. Muchas veces los resultados son curados por expertos.
 
-Examples of Secondary databases are as follows.
+Las bases de datos secundarias suelen contener datos de **mejor** calidad que
+las bases de datos primarias.
 
-InterPro (protein families, motifs, and domains)
-UniProt Knowledgebase (sequence and functional information on proteins)  
+Por ejemplo:
+- Pfam (Protein families)
+- Uniprot Knowledgebase
+
+---
+
+### Bases de datos especìficas/compuestas
+
+- Contienen información sobre tópicos específicos
+  - por ejemplo un organismo modelo
+- Colectan información de varias otras bases de datos
+- Combinan varios aspectos que biológicamente están relacionados, pero cuyos
+datos provienen de diferentes fuentes.
+
+Por ejemplo:
+- TAIR (The Arabidopsis Information Resource)
+- IntAct DB
+
+---
+
+### Bases de datos de secuencias biológicas
+
+#### Genbank (NCBI)
+
+- Es una colección anotada de secuencias de todas las secuencias de ADN que
+  están publicamente disponibles.
+
+- Es parte del consorcio INSDC (International Nucleotide Sequence Database
+  Collaboration), junto con ENA (Europa) y DDBJ (Japón). Todas tienen la misma
+  información.
+
+https://www.ncbi.nlm.nih.gov/genbank/
+
+---
+
+![](images/genbank_stats.pdf)
+---
+#### RefSeq (NCBI Reference Sequence Database)
+
+Es una colección de secuencias de referencia para:
+- ADN genómico
+- Transcriptos
+- Proteinas
+
+Contiene secuencias no redundantes y bien anotadas.
+Sirve como una marco de referencia estables para otras bases de datos, proyectos,
+anotación de variantes, etc.
+
+https://www.ncbi.nlm.nih.gov/refseq/
+
+---
+
+#### NCBI Nucleotide (nuccore)
+
+Es una colección más inclusiva de secuencias de ADN y ARN.
+
+Incluye las secuencias de GenBank, RefSeq y PDB.
+
+https://www.ncbi.nlm.nih.gov/nuccore
+
+---
+
+#### Sequence Read Archive
+
+Es una colección se secuencias generadas en experimentos de secuenciación
+masiva:
+
+- Experimentos de RNA-Seq
+- Experimentos de ChIP-Seq
+- Proyectos de Metagenómica
+- Muestras ambientales
+
+---
+#### Uniprot
+
+- Uniprot provee secuencias y anotaciones funcionales de proteinas.
+- Es el principal recurso sobre secuencias proteínas.
+- Consiste de varias bases de datos:
+  - Uniparc: Colección de proteinas no redundantes de la mayor parte de las
+    secuencias de proteinas disponibles. La mayoría no tiene anotaciones de
+    calidad.
+  - UniprotKB: Colección de secuencias de proteínas con anotaciones funcionales.
+    - Swiss-Prot: Contiene anotaciones curadas manualmente (~550.000)
+    - TrEMBL: Contiene anotaciones generadas automáticamente (~230.000.000). No
+      están revisadas a mano.
+  - Proteomes: Colección de proteínas por organismo.
+
+<!-- --- -->
+<!--
 3. Composite Databases :
 
 The data entered in these types of databases are first compared and then filtered based on desired criteria. 
@@ -137,7 +225,7 @@ Examples of Composite Databases are as follows.
 
 Composite Databases -OWL,NRD and Swissport +TREMBL -->
 
----
+<!-- ---
 
 Revisión por varias bases de datos:
 
@@ -172,4 +260,4 @@ Bases de datos por organismos modelos
 Mobidb
 PED
 STRING
-Intact
+Intact -->
