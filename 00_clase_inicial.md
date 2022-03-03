@@ -148,9 +148,9 @@ Por ejemplo:
 
 ---
 
-## Bases de datos de secuencias biológicas
+# Bases de datos de secuencias biológicas
 
-### Genbank (NCBI)
+## Genbank (NCBI)
 
 - Es una colección anotada de secuencias de todas las secuencias de ADN que
   están publicamente disponibles.
@@ -167,7 +167,7 @@ https://www.ncbi.nlm.nih.gov/genbank/
 
 ---
 
-### RefSeq (NCBI Reference Sequence Database)
+## RefSeq (NCBI Reference Sequence Database)
 
 Es una colección de secuencias de referencia para:
 
@@ -183,7 +183,7 @@ https://www.ncbi.nlm.nih.gov/refseq/
 
 ---
 
-### NCBI Nucleotide (nuccore)
+## NCBI Nucleotide (nuccore)
 
 Es una colección más inclusiva de secuencias de ADN y ARN.
 
@@ -193,7 +193,7 @@ https://www.ncbi.nlm.nih.gov/nuccore
 
 ---
 
-### Sequence Read Archive
+## Sequence Read Archive
 
 Es una colección se secuencias generadas en experimentos de secuenciación
 masiva:
@@ -205,7 +205,7 @@ masiva:
 
 ---
 
-### Uniprot
+## Uniprot
 
 - Uniprot provee secuencias y anotaciones funcionales de proteinas.
 - Es el principal recurso sobre secuencias proteínas.
@@ -221,7 +221,153 @@ masiva:
 
 ---
 
-### Bases de datos de grupos de proteínas
+# Bases de datos de grupos de proteínas
+
+## Pfam
+
+- Es una colección de dominios de familias de proteínas.
+- Cada familia está representada por un alineamiento múltiple y un modelo   oculto de Markov (HMM).
+- Cada familia está definida por un pequeño alineamiento semilla, con este se construye un HMM. Y un alineamiento completo de todas las secuencias detectables a partir del HMM en bases de datos primarias de proteínas.
+- Algunos conjuntos de familias se agrupan en clanes, que tienen que tener un origen evolutivo común.
+
+---
+
+## UniRef
+
+- Es una base de datos de proteínas que tienen similitud secuencial.
+- Hay diferentes versiones según el grado de identidad de secuencia.
+  - UniRef100 combina secuenias idénticas y fragmentos de cualquier organismo.
+  - UniRef90 resulta del agrupamiento de secuencias de Uniref100 al 90% de identidad y 80% de sobreposición con la secuencia de mayor longitud.
+  - Uniref50 resulta del agrupamiento de secuencias de Uniref90 al 50% de identidad y 80% de sobreposición con la secuencia de mayor longitud.
+
+---
+
+# Bases de datos de genes, genomas y variantes
+
+
+## NCBI Gene
+
+- Contiene datos entrelazados de distintas fuentes para un gen:
+  - Mapa de la organización del gen.
+  - Secuencias disponibles
+  - Resultado de expresión génica
+  - Transcriptos
+  - Anotaciones funcionales
+  - Fenotipos asociados
+  - Variantes con importancia clínica
+
+---
+
+## NCBI Genome
+
+- Contiene datos genomas de diferentes organismos:
+  - Secuencias de genómicas
+  - Enlaces los proyectos de ensamblado
+  - Mapas de la organización génica
+  - Anotaciones funcionales
+  - Organización cromosómica
+
+## ENSEMBL / ENSEMBLGenomes
+
+- Es la contraparte Europea de NCBI Genome.
+- Contiene esencialmente el mismo tipo de información.
+
+---
+
+## Online Mendelian Inheritance in Man - OMIM
+
+- Es una colección de genes, desordenes genéticos y fenotipos.
+
+## dbVar
+
+- Es una base de datos de variantes estructurales del Genoma Humano
+- Pueden ser inserciones, deleciones, duplicaciones, inversiones, elementos móviles, translocaciones y otra variantes complejos de un tamaño mayor a 50pb.
+
+---
+
+## dbGaP
+
+- Tiene datos de resultados de estudios de asociación genotipo / fenotipo en humanos.
+- Al tener datos sensibles de pacientes, tiene un acceso restringido.
+
+## ClinVar
+
+- Colecta información acerca variantes genómicas que tienen relevancia clínica.
+
+---
+
+# Bases de datos de estructuras de proteínas
+
+## Protein data bank - PDB
+
+- Tiene resultados experimentales de estructuras de proteínas:
+  - X-ray, NMR, Criofractura, etc
+- Tiene datos de coordenadas x, y, z para los átomos.
+- Tiene emsamblados macromoleculares de algunos complejos proteícos
+- Mayoritariamente contiene proteínas, pero también tiene ácidos nucleicos y moléculas pequeñas.
+
+## NCBI Structure
+
+- Tiene esencialmente la misma información que PDB.
+- Pueden tener distinta información adicional que PDB.
+
+---
+
+# Bases de datos de información médica
+
+## MeSH (Medical subject headings)
+
+- Es un vocabulario controlado de términos médicos.
+- Está organizado en en DAG (*directed acyclic graph*)
+- Se usa para indexar y catalogar información biomédica, por ejemplo PubMed.
+
+https://meshb.nlm.nih.gov/
+
+---
+
+## MEDGEN
+
+- Tiene información sobre medicina génetica.
+  - Tiene descripciones de las enfermedades
+  - Síntomas médicos
+  - Guías para profesionales de la salud
+  - Datos de estudios clínicos
+
+---
+
+# Bases de datos de Bibliografia médica
+
+## Pubmed
+
+- Es la base de datos de publicaciones científicas en medicina/salud más grande que existe.
+
+## PMC
+- Es un subconjunto de pubmed que tiene las publicaciones producidas como parte de proyectos financiados por el NIH/NLM.
+
+---
+
+# Bases de datos de Interacciones moleculares
+
+## IntACT / String / Biogrid
+
+- Son tres bases de datos que recopilan interacciones moleculares, principalmente entre proteínas.
+- Obtienen las interacciones a partir de literatura y/o métodos predictivos.
+- Aunque las tres tienen el mismo objetivo hay diferencias en los métodos que usan y las redes que se generan son diferentes.
+<>
+
+---
+
+# Bases de datos de organismos modelos
+
+## TAIR
+
+## Wormbase
+
+## Flybase
+
+---
+
+
 
 
 
