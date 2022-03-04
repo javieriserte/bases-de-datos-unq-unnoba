@@ -3,10 +3,10 @@ title: Bases de datos biológicas
 subtitle: Bioquímica II
 author: Javier Iserte
 date: 2022
-theme: Singapore
+theme: Malmoe
 marp: true
 class: lead
-colortheme: seagull
+colortheme: dove
 fontfamily: noto-sans
 header-includes:
 - \usepackage{cmbright}
@@ -17,10 +17,6 @@ header-includes:
 - \usepackage{lmodern}
 
 fontsize: 10pt
----
-
-# Bases de datos biológicas
-
 ---
 
 # ¿Cómo está organizado el curso?
@@ -80,13 +76,13 @@ Una base de datos suele contener varias tablas entrelazadas entre ellas.
 
 # Ejemplo de Pfam
 
-![height:600px](./images/pfam_domain.png)
+![](./images/pfam_domain.png)
 
 ---
 
 # Diferentes aspectos de una base de datos biológica
 
-- Desde el punto de vista informático
+- Desde el punto de vista informático (consulta/desarrollo)
   - Estructura de los datos.
   - Modos de acceso programático.
   - Límites en las consultas.
@@ -100,20 +96,33 @@ Una base de datos suele contener varias tablas entrelazadas entre ellas.
 
 ---
 
+# Modos de acceso
+
+- La forma de acceso más común es a través de una página web.
+  - Es la forma más intuitiva de consultar una base de datos
+  - Visualizar unos pocos elementos
+- Varias bases de datos permiten la descarga parcial o total de los datos "crudos"
+- En muchos casos ofrecen una interfaz de de programación de aplicaciones (API)
+  para hacer consultas de forma programática
+  - Automatizar tareas
+  - Crear aplicaciones propias que consulten a esas bases de datos
+
+---
+
 # Tipos de bases de datos biológicas
 
 ## Bases de datos primarias
 
-Archivan datos derivados directamente de resultados experimentales que son subidos por científicos. Por ejemplo:
+Archivan datos derivados directamente de resultados experimentales que son
+subidos por científicos. Por ejemplo:
 
 - Secuencias de ácidos nucleócidos
   - NCBI GenBank
-- Secuencias de proteínas.
-  - NCBI protein
 - Estructuras de proteínas.
   - Protein Data Bank (PDB)
 
-Cada dato tiene asignado un número de acceso (**Accession number**), que identifica estos datos de forma única y nunca cambia.
+Cada dato tiene asignado un número de acceso (**Accession number**), que
+identifica estos datos de forma única y nunca cambia.
 
 ---
 
@@ -130,6 +139,7 @@ Por ejemplo:
 
 - Pfam (Protein families)
 - Uniprot Knowledgebase
+- NCBI Refseq
 
 ---
 
@@ -148,6 +158,22 @@ Por ejemplo:
 
 ---
 
+# ¿Quién da soporte a las bases de datos biológicas?
+
+La mayoría de las bases de datos de mayor relevancia son mantenidas directa o
+  indirectamente por:
+
+- NCBI/NLM/NIH
+- EBI/EMBL
+
+Estas suelen ser las más genérales.
+
+Otras son matenidas por consorcios, instituciones más pequeñas o por grupos de
+investigación. Estas suelen ser las más específicas y con menor nicho de
+usuarios, y con menor mantenimiento.
+
+---
+
 # Bases de datos de secuencias biológicas
 
 ## Genbank (NCBI)
@@ -162,6 +188,8 @@ Por ejemplo:
 https://www.ncbi.nlm.nih.gov/genbank/
 
 ---
+
+### Genbank (NCBI) - Estadísticas
 
 ![](images/genbank_stats.pdf)
 
@@ -203,6 +231,8 @@ masiva:
 - Proyectos de Metagenómica
 - Muestras ambientales
 
+https://www.ncbi.nlm.nih.gov/sra
+
 ---
 
 ## Uniprot
@@ -219,6 +249,8 @@ masiva:
       están revisadas a mano.
   - Proteomes: Colección de proteínas por organismo.
 
+https://www.uniprot.org/
+
 ---
 
 # Bases de datos de grupos de proteínas
@@ -230,6 +262,12 @@ masiva:
 - Cada familia está definida por un pequeño alineamiento semilla, con este se construye un HMM. Y un alineamiento completo de todas las secuencias detectables a partir del HMM en bases de datos primarias de proteínas.
 - Algunos conjuntos de familias se agrupan en clanes, que tienen que tener un origen evolutivo común.
 
+https://pfam.xfam.org/
+
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{images/hmm.pdf}
+\end{center}
+
 ---
 
 ## UniRef
@@ -239,6 +277,8 @@ masiva:
   - UniRef100 combina secuenias idénticas y fragmentos de cualquier organismo.
   - UniRef90 resulta del agrupamiento de secuencias de Uniref100 al 90% de identidad y 80% de sobreposición con la secuencia de mayor longitud.
   - Uniref50 resulta del agrupamiento de secuencias de Uniref90 al 50% de identidad y 80% de sobreposición con la secuencia de mayor longitud.
+
+https://www.uniprot.org/uniref/
 
 ---
 
@@ -256,6 +296,8 @@ masiva:
   - Fenotipos asociados
   - Variantes con importancia clínica
 
+https://www.ncbi.nlm.nih.gov/gene
+
 ---
 
 ## NCBI Genome
@@ -267,10 +309,14 @@ masiva:
   - Anotaciones funcionales
   - Organización cromosómica
 
+https://www.ncbi.nlm.nih.gov/genome
+
 ## ENSEMBL / ENSEMBLGenomes
 
 - Es la contraparte Europea de NCBI Genome.
 - Contiene esencialmente el mismo tipo de información.
+
+https://ensemblgenomes.org/
 
 ---
 
@@ -283,6 +329,8 @@ masiva:
 - Es una base de datos de variantes estructurales del Genoma Humano
 - Pueden ser inserciones, deleciones, duplicaciones, inversiones, elementos móviles, translocaciones y otra variantes complejos de un tamaño mayor a 50pb.
 
+https://www.ncbi.nlm.nih.gov/dbvar/
+
 ---
 
 ## dbGaP
@@ -290,9 +338,19 @@ masiva:
 - Tiene datos de resultados de estudios de asociación genotipo / fenotipo en humanos.
 - Al tener datos sensibles de pacientes, tiene un acceso restringido.
 
+https://www.ncbi.nlm.nih.gov/gap/
+
 ## ClinVar
 
 - Colecta información acerca variantes genómicas que tienen relevancia clínica.
+
+https://www.ncbi.nlm.nih.gov/clinvar/
+
+## Cosmic (Catalog of somatic mutations in Cancer)
+
+- Contiene información de mutaciones somáticas en células cancerígenas.
+
+https://cancer.sanger.ac.uk/cosmic
 
 ---
 
@@ -306,10 +364,14 @@ masiva:
 - Tiene emsamblados macromoleculares de algunos complejos proteícos
 - Mayoritariamente contiene proteínas, pero también tiene ácidos nucleicos y moléculas pequeñas.
 
+https://www.rcsb.org
+
 ## NCBI Structure
 
 - Tiene esencialmente la misma información que PDB.
 - Pueden tener distinta información adicional que PDB.
+
+https://www.ncbi.nlm.nih.gov/structure
 
 ---
 
@@ -323,6 +385,10 @@ masiva:
 
 https://meshb.nlm.nih.gov/
 
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{images/dag.pdf}
+\end{center}
+
 ---
 
 ## MEDGEN
@@ -333,6 +399,8 @@ https://meshb.nlm.nih.gov/
   - Guías para profesionales de la salud
   - Datos de estudios clínicos
 
+https://www.ncbi.nlm.nih.gov/medgen
+
 ---
 
 # Bases de datos de Bibliografia médica
@@ -341,8 +409,30 @@ https://meshb.nlm.nih.gov/
 
 - Es la base de datos de publicaciones científicas en medicina/salud más grande que existe.
 
+https://www.ncbi.nlm.nih.gov/pubmed
+
 ## PMC
+
 - Es un subconjunto de pubmed que tiene las publicaciones producidas como parte de proyectos financiados por el NIH/NLM.
+
+https://www.ncbi.nlm.nih.gov/pmc
+
+---
+
+# Bases de datos de vías metabólicas
+
+## Reactome
+
+- Contiene vías del metabólismos intermedio, metabolismo de protínas, enfermedades, etc.
+
+https://reactome.org/
+
+## Kyoto Encyclopedia of Genes and Genomes
+
+- Es una base de datos que contiene información sobre sistemas biológicos de alto nivel de alto nivel.
+- Esencialmente contiene información sobre vías metabólicas, genes, genomas, enzimas y reacciones químicas involucradas.
+
+https://www.genome.jp/kegg/
 
 ---
 
@@ -353,70 +443,57 @@ https://meshb.nlm.nih.gov/
 - Son tres bases de datos que recopilan interacciones moleculares, principalmente entre proteínas.
 - Obtienen las interacciones a partir de literatura y/o métodos predictivos.
 - Aunque las tres tienen el mismo objetivo hay diferencias en los métodos que usan y las redes que se generan son diferentes.
-<>
+
+String: https://string-db.org
+
+IntAct: https://www.ebi.ac.uk/intact/
+
+Biogrid: https://thebiogrid.org/
 
 ---
 
 # Bases de datos de organismos modelos
 
-## TAIR
+## TAIR - The Arabidopsis Information Resource
+
+- TAIR es una base de datos sobre el organismo modelo *Arabidopsis thaliana*
+- Contiene:
+  - Secuencias y anotaciones del genomas.
+  - Productos génicos.
+  - Expresión génica.
+  - Marcadores fenotípicos.
+  - Visualizadores, etc
+
+
+---
+
+https://www.arabidopsis.org/
 
 ## Wormbase
 
-## Flybase
+- Es una base de datos del nematodo *C. elegans* y otros relacionados.
+
+- Contiene:
+  - Secuencias y anotaciones genómicas.
+  - Información de expresión génica.
+  - Herramientas para análisis.
+  - Mapas genéticos, etc.
+
+
+https://wormbase.org/
 
 ---
 
+## Otras bases de datos de organismos modelos
 
+- Flybase: Base de datos de Drosophila melanogaster y relacionadas.
 
+https://flybase.org/
 
+- Phytozome: Es una colección de genomas de diversas plantas.
 
-<!-- --- -->
-<!--
-3. Composite Databases :
+https://phytozome-next.jgi.doe.gov/
 
-The data entered in these types of databases are first compared and then filtered based on desired criteria. 
-The initial data are taken from the primary database, and then they are merged together based on certain conditions. 
-It helps in searching sequences rapidly. Composite Databases contain non-redundant data. 
-Examples –
+- Xenbase: Base de datos de Xenopus.
 
-Examples of Composite Databases are as follows.
-
-Composite Databases -OWL,NRD and Swissport +TREMBL -->
-
-<!-- ---
-
-Revisión por varias bases de datos:
-
----
-
-- Bases de datos de NCBI
-  - nucleotide
-  - protein
-  - GEO
-  - sra
-  - Taxonomy
-  - Genes
-
----
-
-- Uniprot
-- pfam
-- Ensembl
-- Ensembl genome
-- PDB
-
----
-
-Bases de datos por organismos modelos
-- Flybase
-- Wormbase
-- TAIR
-- Araport
-
----
-
-Mobidb
-PED
-STRING
-Intact -->
+http://www.xenbase.org/entry/
