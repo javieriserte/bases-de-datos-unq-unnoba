@@ -46,3 +46,6 @@ vignettes/*.pdf
 
 # Pandoc tex2pdf
 tex2pdf*
+
+# Initial class pdf file
+00_clase_inicial.pdf
