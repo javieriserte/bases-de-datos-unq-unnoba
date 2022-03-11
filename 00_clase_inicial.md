@@ -1,6 +1,6 @@
 ---
 title: Bases de datos biológicas
-subtitle: Bioquímica II
+subtitle: UNNOBA
 author: Javier Iserte
 date: 2022
 theme: Malmoe
