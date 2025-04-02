@@ -103,7 +103,6 @@ Tercer encuentro:
   - Generador de datos
   - Desarrollador
 
-
 ## <!--- Empty title 2 -->
 
 \begin{center}
