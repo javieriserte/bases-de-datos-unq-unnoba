@@ -850,8 +850,10 @@ Bases de datos de Interacciones moleculares
 - Usa `*` para truncar (solo en algunos contextos):
 
 ```bash
-cancer*[Title]  → busca “cancer”, “cancers”, “cancerous”, etc.
+cancer*[Title]
 ```
+
+busca “cancer”, “cancers”, “cancerous”, etc.
 
 ## Características del Entrez Query Language (cont.)
 
@@ -873,7 +875,8 @@ Algunos campos comunes que se pueden usar:
 - Ejemplo:
 
   ```bash
-  BRCA1[Gene] AND "Homo sapiens"[Organism] AND 2023[Publication Date]
+  BRCA1[Gene] AND "Homo sapiens"[Organism]
+    AND 2023[Publication Date]
   ```
 
 ## Características del Entrez Query Language (cont. 2)
@@ -887,7 +890,8 @@ BRCA1 AND breast cancer AND free full text[filter]
 BRCA1 AND breast cancer AND full text[filter]
 BRCA1 AND breast cancer AND has abstract[filter]
 BRCA1 AND breast cancer AND is review[filter]
-BRCA1[Gene] AND Homo sapiens[Organism] AND srcdb_refseq[PROP] AND biomol_genomic[PROP]
+BRCA1[Gene] AND Homo sapiens[Organism]
+  AND srcdb_refseq[PROP] AND biomol_genomic[PROP]
 BRCA1 AND 1000:1000000[SLEN]
 ```
 
@@ -950,7 +954,6 @@ En UniProt puedes buscar usando:
 | `length:`          | `length:[100 TO 300]`                        |
 | `proteome:`        | `proteome:UP000005640` (ID del proteoma)     |
 | `annotation:`      | `annotation:(signal peptide)`                |
-| `ec:`              | `ec:1.1.1.1`                                 |
 | `accession:`       | `accession:P38398`                           |
 | `cc:FUNCTION`      | `cc:function:"tumor suppressor"`             |
 
@@ -960,7 +963,8 @@ En UniProt puedes buscar usando:
 - Puedes usar paréntesis para agrupar:
 
   ```text
-  (gene:TP53 OR gene:BRCA1) AND organism:"Homo sapiens" AND review:true
+  (gene:TP53 OR gene:BRCA1) AND organism:"Homo sapiens"
+    AND review:true
   ```
 
 ## Servicio de **ID mapping** de **Uniprot**
