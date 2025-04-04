@@ -330,12 +330,12 @@ Incluye las secuencias de GenBank, RefSeq y otras.
 
 ## GenBank vs nuccore
 
-|           | GenBank                              | Nuccore                                                 |
-| --------- | ------------------------------------ | ------------------------------------------------------- |
-| Contenido | Secuencias enviadas públicamente con anotaciones | Colección agregada de secuencias de nucleótidos de múltiples fuentes |
-| Fuentes   | Envíos de investigadores de todo el mundo | GenBank, RefSeq, otros |
-| Curación  | Curación limitada, contiene entradas redundantes | Incluye secuencias de referencia curadas y de alta calidad (RefSeq) |
-| Propósito | Archivo de datos de secuencias sin procesar con anotaciones | Repositorio consultable de secuencias de nucleótidos |
+|             | GenBank                              | Nuccore                                                 |
+| ----------- | ------------------------------------ | ------------------------------------------------------- |
+| Contenido   | Secuencias enviadas públicamente con anotaciones | Colección agregada de secuencias de nucleótidos de múltiples fuentes |
+| Fuentes     | Envíos de investigadores de todo el mundo | GenBank, RefSeq, otros |
+| Curación    | Curación limitada, contiene entradas redundantes | Incluye secuencias de referencia curadas y de alta calidad (RefSeq) |
+| Propósito   | Archivo de datos de secuencias sin procesar con anotaciones | Repositorio consultable de secuencias de nucleótidos |
 
 ## Identificadores en GenBank y RefSeq
 
@@ -357,7 +357,7 @@ Incluye las secuencias de GenBank, RefSeq y otras.
 
 ## Identificadores en GenBank y RefSeq (cont. 1)
 
-## Número GI (Legacy)
+### Número GI (Legacy)
 
 - Un identificador único asignado previamente a una versión específica de una secuencia.
 - En desuso desde 2016 en favor del formato accession.version.
@@ -372,7 +372,9 @@ Incluye las secuencias de GenBank, RefSeq y otras.
   - NC : Cromosomas completos (NC_000001.11)
   - NM : Secuencias de mRNA (NM_001256789.2)
   - NR : RNAs no codificantes (NR_123456.1)
-  - XP : Proteínas predichas (XP_987654.1)
+  - NP : proteína codificada por un gen nuclear (NP_123455.1)
+  - XP : proteína *predicha* automáticamente (XP_987654.1)
+  - YP : proteína de genoma bacteriano o viral revisada (YP_987523)
 
 ### Identificadores locales de secuencia (Locus)
 
@@ -385,10 +387,17 @@ Incluye las secuencias de GenBank, RefSeq y otras.
 Es una colección se secuencias generadas en experimentos de secuenciación
 masiva:
 
+- Experimentos de secuenciación genómica
 - Experimentos de RNA-Seq
+- Secuenciación de exomas
 - Experimentos de ChIP-Seq
 - Proyectos de Metagenómica
 - Muestras ambientales
+
+El formato de archivo más común para estos datos es Fastq.
+
+Las entradas de SRA suelen ser de gran tamaño y hay métodos especializados para
+descargas los datos de secuencias.
 
 [https://www.ncbi.nlm.nih.gov/sra](https://www.ncbi.nlm.nih.gov/sra)
 
@@ -418,9 +427,12 @@ se mapea a la nueva entrada.
 Formato:
 
 - Una letra, un número, tres alfanuméricos y un número (O12345)
+  - [OPQ] [0-9] [A-Z,0-9] [A-Z,0-9] [A-Z,0-9] [0-9]
 - Una letra, un número, una letra, dos alfanumŕicos y un número (A1BC23).
+  - [A-N,R-Z] [0-9] [A-Z] [A-Z,0-9] [A-Z,0-9] [0-9]
 - Una letra, un número, (una letra, dos alfanumŕicos y un número) dos veces
   (A1B234C567).
+  - [A-N,R-Z] [0-9] [A-Z] [A-Z,0-9] [A-Z,0-9] [0-9] [A-Z] [A-Z,0-9] [A-Z,0-9] [0-9]
 
 ## Identificadores de Uniprot (cont.)
 
@@ -554,9 +566,19 @@ Bases de datos de genes, genomas y variantes
 
 ## ENSEMBL / ENSEMBLGenomes
 
-- Proporciona datos genómicos para:
-  - Enseml: especies  vertebradas.
-  - EnsemlGenomes: especies no vertebradas.
+- Ensembl
+  - Una base de datos genómica mantenida por el EMBL-EBI y el Wellcome Sanger Institute.
+  - Información genómica detallada de vertebrados, principalmente humanos, ratones y otros animales.
+  - Incluye: Genes, variantes, anotaciones, transcritos, regulación, filogenia, y más.
+- Ensembl Genomes
+  - La extensión de Ensembl para organismos no vertebrados.
+  - Datos genómicos de bacterias, hongos, protistas, plantas e invertebrados.
+  - División en portales:
+    - Ensembl Bacteria
+    - Ensembl Fungi
+    - Ensembl Protists
+    - Ensembl Plants
+    - Ensembl Metazoa (invertebrados)
 
 [https://www.ensembl.org/](https://www.ensembl.org/)
 [https://ensemblgenomes.org/](https://ensemblgenomes.org/)
