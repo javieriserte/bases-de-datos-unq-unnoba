@@ -557,12 +557,24 @@ Bases de datos de genes, genomas y variantes
 
 [https://www.ncbi.nlm.nih.gov/genome](https://www.ncbi.nlm.nih.gov/genome)
 
-### Genome Assembly Accession
+### NCBI Assembly
 
-- Identifica un ensamblaje genómico completo en NCBI.
-- Comienza con "GCF" → Ensamblajes en la base de datos RefSeq (curados por NCBI).
-- Comienza con "GCA" → Ensamblajes en la base de datos GenBank (subidos por investigadores).
-- Incluye un número de versión para rastrear actualizaciones.
+- Contiene ensamblajes genómicos de organismos.
+- Un ensamblaje es el resultado de unir fragmentos de ADN (lecturas) para reconstruir genomas completos o parciales.
+- Identificadores
+  - Identifica un ensamblaje genómico completo en NCBI.
+  - Comienza con "GCF" → Ensamblajes en la base de datos RefSeq (curados por NCBI).
+  - Comienza con "GCA" → Ensamblajes en la base de datos GenBank (subidos por investigadores).
+  - Incluye un número de versión para rastrear actualizaciones.
+
+## NCBI Assembly y NCBI Genome
+
+| Característica       | NCBI Assembly                                | NCBI Genome                                |
+|----------------------|----------------------------------------------|-------------------------------------------|
+| **Foco principal**   | Ensamblajes genómicos (estructura)           | Organismos y sus genomas (biología funcional) |
+| **Nivel**            | Técnicamente detallado                       | Más orientado al usuario final            |
+| **Datos incluidos**  | FASTA, AGP, informes de ensamblaje           | Genes, proteínas, anotaciones, resumen del genoma |
+| **Relación**         | Cada entrada en Genome apunta a uno o varios ensamblajes de Assembly | Usa la información de Assembly como base |
 
 ## ENSEMBL / ENSEMBLGenomes
 
