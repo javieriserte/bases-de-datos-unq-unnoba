@@ -822,7 +822,7 @@ Bases de datos de Interacciones moleculares
 
 - El lenguaje de consulta que utiliza el **NCBI (National Center for
   Biotechnology Information)** para buscar en sus bases de datos se llama
-  **Entrez Query Language**. 
+  **Entrez Query Language**.
 - Este lenguaje permite realizar búsquedas avanzadas en los distintos recursos
   del NCBI, como **PubMed**, **Gene**, **Nucleotide**, **Protein**, entre otros.
 
