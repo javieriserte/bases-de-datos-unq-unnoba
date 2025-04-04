@@ -818,6 +818,176 @@ Bases de datos de Interacciones moleculares
 - Xenbase: Base de datos de Xenopus.
   - [http://www.xenbase.org/entry/](http://www.xenbase.org/entry/)
 
+## **Entrez Query Language**
+
+- El lenguaje de consulta que utiliza el **NCBI (National Center for
+  Biotechnology Information)** para buscar en sus bases de datos se llama
+  **Entrez Query Language**. 
+- Este lenguaje permite realizar búsquedas avanzadas en los distintos recursos
+  del NCBI, como **PubMed**, **Gene**, **Nucleotide**, **Protein**, entre otros.
+
+## Características del Entrez Query Language
+
+### **Palabras clave + campos específicos**
+
+  Puedes limitar una búsqueda a un campo usando la sintaxis `[campo]`. Ejemplo:
+
+  ```bash
+  BRCA1[Gene] AND human[Organism]
+  ```
+
+### **Operadores booleanos**
+
+- `AND`, `OR`, `NOT` (deben ir en mayúsculas)
+- Se pueden usar paréntesis para agrupar:
+
+```bash
+(BRCA1[Gene] OR BRCA2[Gene]) AND breast cancer[Title]
+```
+
+### **Truncamientos y comodines**
+
+- Usa `*` para truncar (solo en algunos contextos):
+
+```bash
+cancer*[Title]  → busca “cancer”, “cancers”, “cancerous”, etc.
+```
+
+## Características del Entrez Query Language (cont.)
+
+### **Frases exactas**
+
+- Usa comillas para buscar frases exactas:
+
+```bash
+"breast cancer"[Title]
+```
+
+### **Campos de búsqueda**
+
+Algunos campos comunes que se pueden usar:
+
+- `[Author]`, `[Title]`, `[Journal]`, `[Abstract]`
+- `[Organism]`, `[Gene]`, `[Protein Name]`
+- `[Publication Date]`, `[Create Date]`, `[Modification Date]`
+- Ejemplo:
+
+  ```bash
+  BRCA1[Gene] AND "Homo sapiens"[Organism] AND 2023[Publication Date]
+  ```
+
+## Características del Entrez Query Language (cont. 2)
+
+### Filtros
+
+Condiciones especiales de búsqueda se pueden definir en **filtros**.
+
+```bash
+BRCA1 AND breast cancer AND free full text[filter]
+BRCA1 AND breast cancer AND full text[filter]
+BRCA1 AND breast cancer AND has abstract[filter]
+BRCA1 AND breast cancer AND is review[filter]
+BRCA1[Gene] AND Homo sapiens[Organism] AND srcdb_refseq[PROP] AND biomol_genomic[PROP]
+BRCA1 AND 1000:1000000[SLEN]
+```
+
+## Uniprot Query Language
+
+El **lenguaje de consulta de UniProt** es muy potente y tiene su propio
+**sistema de búsqueda estructurada**, similar al de Entrez, pero con su propia
+sintaxis.
+
+En UniProt puedes buscar usando:
+
+- **Palabras clave simples**
+- **Búsquedas por campos específicos**
+- **Operadores booleanos**
+- **Filtros avanzados**
+
+## Ejemplos de Uniprot query language
+
+- Buscar una proteína por nombre:
+
+  ```bash
+  insulin
+  ```
+
+- Buscar por organismo:
+
+  ```bash
+  organism:"Homo sapiens"
+  ```
+
+- Buscar por ID de gen:
+
+  ```bash
+  gene:BRCA1
+  ```
+
+## Ejemplos de Uniprot query language (cont.)
+
+- Buscar proteínas revisadas (Swiss-Prot):
+
+  ```bash
+  reviewed:true
+  ```
+
+- Buscar proteínas sin revisar (TrEMBL):
+
+  ```bash
+  reviewed:false
+  ```
+
+## Ejemplos de Uniprot query language (cont. 1)
+
+### Campos más comunes
+
+| Campo              | Ejemplo                                      |
+|--------------------|----------------------------------------------|
+| `gene:`            | `gene:TP53`                                  |
+| `organism_name:`   | `organism_name:"Homo sapiens"`                    |
+| `reviewed:`        | `reviewed:true` (Swiss-Prot)                 |
+| `length:`          | `length:[100 TO 300]`                        |
+| `proteome:`        | `proteome:UP000005640` (ID del proteoma)     |
+| `annotation:`      | `annotation:(signal peptide)`                |
+| `ec:`              | `ec:1.1.1.1`                                 |
+| `accession:`       | `accession:P38398`                           |
+| `cc:FUNCTION`      | `cc:function:"tumor suppressor"`             |
+
+### Operadores booleanos
+
+- `AND`, `OR`, `NOT` — todos en mayúsculas.
+- Puedes usar paréntesis para agrupar:
+
+  ```text
+  (gene:TP53 OR gene:BRCA1) AND organism:"Homo sapiens" AND review:true
+  ```
+
+## Servicio de **ID mapping** de **Uniprot**
+
+- Es una herramienta que te permite **convertir identificadores**
+  entre UniProt y otras bases de datos biológicas.
+- De **Ensembl Gene ID** → **UniProt ID**
+- De **NCBI Gene ID** → **UniProt ID**
+- De **UniProt Accession** → **RefSeq**, **PDB**, **GO**, **KEGG**, etc.
+- O viceversa
+- Uno de los identificadores tiene que ser de Uniprot.
+
+[https://www.uniprot.org/id-mapping](https://www.uniprot.org/id-mapping)
+
+## Biomart
+
+- Es una herramienta de minería de datos biológicos desarrollada inicialmente
+  por el equipo de Ensembl.
+- Te permite consultar genes, transcritos, proteínas y anotaciones asociadas de
+  manera masiva.
+- Convertir entre distintos tipos de identificadores.
+- Descargar anotaciones genómicas (GO terms, cromosoma, ubicación, etc.)
+- Obtener secuencias de genes, exones o proteínas
+- Filtrar por especie, longitud, biotipo, expresión, etc.
+
+[https://www.ensembl.org/biomart/martview](https://www.ensembl.org/biomart/martview)
+
 ## <!--- Empty title 12 -->
 
 \begin{center}
