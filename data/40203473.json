@@ -1,0 +1,77 @@
+{
+  "header": { "type": "esummary", "version": "0.3" },
+  "result": {
+    "uids": ["40203473"],
+    "40203473": {
+      "uid": "40203473",
+      "pubdate": "2025 Mar 18",
+      "epubdate": "2025 Mar 18",
+      "source": "Phytomedicine",
+      "authors": [
+        { "name": "Liao W", "authtype": "Author", "clusterid": "" },
+        { "name": "Hu R", "authtype": "Author", "clusterid": "" },
+        { "name": "Ji Y", "authtype": "Author", "clusterid": "" },
+        { "name": "Zhong Z", "authtype": "Author", "clusterid": "" },
+        { "name": "Huang X", "authtype": "Author", "clusterid": "" },
+        { "name": "Cai T", "authtype": "Author", "clusterid": "" },
+        { "name": "Zhou C", "authtype": "Author", "clusterid": "" },
+        { "name": "Wang Y", "authtype": "Author", "clusterid": "" },
+        { "name": "Ye Z", "authtype": "Author", "clusterid": "" },
+        { "name": "Yang P", "authtype": "Author", "clusterid": "" }
+      ],
+      "lastauthor": "Yang P",
+      "title": "Oleic acid regulates CD4+ T cells differentiation by targeting ODC1-mediated STAT5A phosphorylation in Vogt-Koyanagi-Harada disease.",
+      "sorttitle": "oleic acid regulates cd4 t cells differentiation by targeting odc1 mediated stat5a phosphorylation in vogt koyanagi harada disease",
+      "volume": "141",
+      "issue": "",
+      "pages": "156660",
+      "lang": ["eng"],
+      "nlmuniqueid": "9438794",
+      "issn": "0944-7113",
+      "essn": "1618-095X",
+      "pubtype": ["Journal Article"],
+      "recordstatus": "PubMed - as supplied by publisher",
+      "pubstatus": "10",
+      "articleids": [
+        { "idtype": "pubmed", "idtypen": 1, "value": "40203473" },
+        {
+          "idtype": "doi",
+          "idtypen": 3,
+          "value": "10.1016/j.phymed.2025.156660"
+        },
+        { "idtype": "pii", "idtypen": 4, "value": "S0944-7113(25)00300-9" }
+      ],
+      "history": [
+        { "pubstatus": "medline", "date": "2025/04/09 18:26" },
+        { "pubstatus": "pubmed", "date": "2025/04/09 18:26" },
+        { "pubstatus": "received", "date": "2025/01/16 00:00" },
+        { "pubstatus": "revised", "date": "2025/02/25 00:00" },
+        { "pubstatus": "accepted", "date": "2025/03/17 00:00" },
+        { "pubstatus": "entrez", "date": "2025/04/09 18:00" }
+      ],
+      "references": [],
+      "attributes": ["Has Abstract"],
+      "pmcrefcount": "",
+      "fulljournalname": "Phytomedicine : international journal of phytotherapy and phytopharmacology",
+      "elocationid": "doi: 10.1016/j.phymed.2025.156660",
+      "doctype": "citation",
+      "srccontriblist": [],
+      "booktitle": "",
+      "medium": "",
+      "edition": "",
+      "publisherlocation": "",
+      "publishername": "",
+      "srcdate": "",
+      "reportnumber": "",
+      "availablefromurl": "",
+      "locationlabel": "",
+      "doccontriblist": [],
+      "docdate": "",
+      "bookname": "",
+      "chapter": "",
+      "sortpubdate": "2025/03/18 00:00",
+      "sortfirstauthor": "Liao W",
+      "vernaculartitle": ""
+    }
+  }
+}

@@ -895,6 +895,59 @@ BRCA1[Gene] AND Homo sapiens[Organism]
 BRCA1 AND 1000:1000000[SLEN]
 ```
 
+## Filtros disponibles en Nuccore usando Entrez/E-utilities
+
+### **Filtros por tipo de secuencia**
+
+- `srcdb_genbank[PROP]`: Limita la búsqueda a secuencias provenientes de GenBank.
+- `srcdb_refseq[PROP]`: Limita la búsqueda a secuencias de RefSeq.
+- `srcdb_tpa[PROP]`: Limita la búsqueda a secuencias de TPA (Third Party Annotation).
+
+### **Filtros por tipo de molécula**
+
+- `biomol_genomic[PROP]`: Secuencias de ADN genómico.
+- `biomol_mrna[PROP]`: Secuencias de mRNA.
+- `biomol_rrna[PROP]`: Secuencias de rRNA.
+- `biomol_trna[PROP]`: Secuencias de tRNA.
+- `biomol_ncrna[PROP]`: Secuencias de RNA no codificante.
+
+## Filtros disponibles en Nuccore usando Entrez/E-utilities (cont.)
+
+### **Filtros por compartimento**
+
+- `mitochondrion[filter]`: Secuencias de ADN mitocondrial.
+- `chloroplast[filter]`: Secuencias de ADN de cloroplasto.
+- `plasmid[filter]`: Secuencias de ADN plasmídico.
+- `plastid[filter]`: Secuencias de cromosomas completos.
+
+### **Búsqueda por organismos**
+
+- Se puede buscar secuencias específicas de un organismo utilizando el campo
+`[Organism]`.
+
+```bash
+"Homo sapiens"[Organism]
+"Hominoidea"[Organism]
+"txid3124295"[Organism]
+```
+
+## Valores de retorno de la API de Entrez / Eutils
+
+- EInfo, Esearch, ESummary:
+  - retmode: xml o json
+- EFetch:
+
+| Tipo de valor | rettype | retmode |
+| -------       | -----   | -----   |
+| Full XML      | gb      | xml     |
+| Accession     | acc     | text    |
+| FASTA         | fasta   | text    |
+| ASN.1         | null    | text    |
+| SeqID         | seqid   | text    |
+| Feature table | ft      | text    |
+| Genbank       | gb      | text    |
+
+
 ## Uniprot Query Language
 
 El **lenguaje de consulta de UniProt** es muy potente y tiene su propio

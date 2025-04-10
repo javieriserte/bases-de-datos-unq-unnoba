@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<BioSampleSet>
+    <BioSample access="public" publication_date="2025-02-03T00:00:00.000"
+        last_update="2025-02-03T20:01:07.123" submission_date="2025-02-03T19:15:05.603"
+        id="46534748" accession="SAMN46534748">
+        <Ids>
+            <Id db="BioSample" is_primary="1">SAMN46534748</Id>
+            <Id db_label="Sample name">36. smb_6 D_rep3</Id>
+            <Id db="SRA">SRS23971570</Id>
+        </Ids>
+        <Description>
+            <Title>Plant sample from Arabidopsis thaliana</Title>
+            <Organism taxonomy_id="3702" taxonomy_name="Arabidopsis thaliana">
+                <OrganismName>Arabidopsis thaliana</OrganismName>
+            </Organism>
+        </Description>
+        <Owner>
+            <Name>Seoul National University</Name>
+            <Contacts>
+                <Contact>
+                    <Name>
+                        <First>Woo-Taek</First>
+                        <Last>Jeon</Last>
+                    </Name>
+                </Contact>
+            </Contacts>
+        </Owner>
+        <Models>
+            <Model>Plant</Model>
+        </Models>
+        <Package display_name="Plant; version 1.0">Plant.1.0</Package>
+        <Attributes>
+            <Attribute attribute_name="isolate" harmonized_name="isolate" display_name="isolate">36.
+                not applicable</Attribute>
+            <Attribute attribute_name="cultivar" harmonized_name="cultivar" display_name="cultivar">36.
+                not applicable</Attribute>
+            <Attribute attribute_name="ecotype" harmonized_name="ecotype" display_name="ecotype">36.
+                col</Attribute>
+            <Attribute attribute_name="age" harmonized_name="age" display_name="age">6D</Attribute>
+            <Attribute attribute_name="dev_stage" harmonized_name="dev_stage"
+                display_name="development stage">36. seedling</Attribute>
+            <Attribute attribute_name="collection_date" harmonized_name="collection_date"
+                display_name="collection date">2024-01-21</Attribute>
+            <Attribute attribute_name="geo_loc_name" harmonized_name="geo_loc_name"
+                display_name="geographic location">not applicable</Attribute>
+            <Attribute attribute_name="tissue" harmonized_name="tissue" display_name="tissue">36.
+                root tip</Attribute>
+        </Attributes>
+        <Links>
+            <Link type="entrez" target="bioproject" label="PRJNA1218802">1218802</Link>
+        </Links>
+        <Status status="live" when="2025-02-03T19:15:05.604" />
+    </BioSample>
+</BioSampleSet>

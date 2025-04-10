@@ -1,0 +1,41 @@
+{
+  "header": { "type": "esummary", "version": "0.3" },
+  "result": {
+    "uids": ["565671692"],
+    "565671692": {
+      "uid": "565671692",
+      "term": "565671692",
+      "caption": "NM_001287420",
+      "title": "Sus scrofa FUS RNA binding protein (FUS), mRNA",
+      "extra": "gi|565671692|ref|NM_001287420.1|",
+      "gi": 565671692,
+      "createdate": "2013/12/13",
+      "updatedate": "2025/04/02",
+      "flags": 512,
+      "taxid": 9823,
+      "slen": 1554,
+      "biomol": "mRNA",
+      "moltype": "rna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "genomic",
+      "subtype": "breed|chromosome|map",
+      "subname": "Danish Landrace|3|3",
+      "assemblygi": "",
+      "assemblyacc": "JF940526.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "Sus scrofa",
+      "strain": "",
+      "biosample": "",
+      "statistics": "",
+      "properties": { "na": "1", "value": "1" },
+      "oslt": { "indexed": true, "value": "NM_001287420.1" },
+      "accessionversion": "NM_001287420.1"
+    }
+  }
+}

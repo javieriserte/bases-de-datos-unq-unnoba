@@ -1,0 +1,16 @@
+<eSummaryResult>
+    <DocSum>
+        <Id>314295</Id>
+        <Item Name="Status" Type="String">active</Item>
+        <Item Name="Rank" Type="String">superfamily</Item>
+        <Item Name="Division" Type="String">primates</Item>
+        <Item Name="ScientificName" Type="String">Hominoidea</Item>
+        <Item Name="CommonName" Type="String">apes</Item>
+        <Item Name="TaxId" Type="Integer">314295</Item>
+        <Item Name="AkaTaxId" Type="Integer">0</Item>
+        <Item Name="Genus" Type="String" />
+        <Item Name="Species" Type="String" />
+        <Item Name="Subsp" Type="String" />
+        <Item Name="ModificationDate" Type="Date">2017/06/14 00:00</Item>
+    </DocSum>
+</eSummaryResult>
