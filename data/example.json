@@ -1,0 +1,20 @@
+{
+  "header": {
+    "type": "esearch",
+    "version": "0.3"
+  },
+  "esearchresult": {
+    "count": "33933",
+    "retmax": "5",
+    "retstart": "0",
+    "idlist": [
+      "40155922",
+      "40155472",
+      "40155012",
+      "40153687",
+      "40152319"
+    ],
+    "translationset": [],
+    "querytranslation": "\"TP53\"[All Fields]"
+  }
+}

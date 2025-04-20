@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE eSearchResult PUBLIC "-//NLM//DTD esearch 20060628//EN" "https://eutils.ncbi.nlm.nih.gov/eutils/dtd/20060628/esearch.dtd">
+<eSearchResult>
+    <Count>33933</Count>
+    <RetMax>5</RetMax>
+    <RetStart>0</RetStart>
+    <IdList>
+        <Id>40155922</Id>
+        <Id>40155472</Id>
+        <Id>40155012</Id>
+        <Id>40153687</Id>
+        <Id>40152319</Id>
+    </IdList>
+    <TranslationSet />
+    <QueryTranslation>"TP53"[All Fields]</QueryTranslation>
+</eSearchResult>
