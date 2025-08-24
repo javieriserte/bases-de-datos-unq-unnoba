@@ -16,3 +16,4 @@
 | Mariana Aybar            |  10 |  10 |  10 |  10 |    10 |
 | Nicolás Lavatti          |  10 |  10 |  10 |  10 |    10 |
 | Pirén Zambrano           |  10 |   9 |  10 |  10 |    10 |
+| Paola Verón              |  10 |  10 |  10 |  10 |    10 |
